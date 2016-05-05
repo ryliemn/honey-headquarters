@@ -1,0 +1,163 @@
+@font-face {
+  font-family: PoohFont;
+  src: url(./pooh.ttf);
+}
+
+select {
+  padding: 4px;
+  color: rgba(90, 0, 3, 1);
+}
+
+body {
+  margin-left: 10%;
+  margin-right: 10%;
+
+  font-family: helvetica;
+}
+
+h2 {
+  margin: 10px 10px;
+}
+
+label {
+  margin: 0;
+}
+
+.image {
+  float: left;
+  margin-right: 20px;
+  width: 200px;
+}
+
+.large-image {
+  animation-name: enlarge;
+  animation-duration: .5s;
+  width: 500px;
+}
+
+.small-image {
+  animation-name: ensmallen;
+  animation-duration: .5s;
+  width: 200px;
+}
+
+@keyframes enlarge {
+  from {
+    width: 200px;
+  }
+
+  to {
+    width: 500px;
+  }
+}
+
+@keyframes ensmallen {
+  from {
+    width: 500px;
+  }
+
+  to {
+    width: 200px;
+  }
+}
+
+#query-builder {
+  border: solid 1px black;
+  background-color: rgba(90, 0, 3, 1);
+  color: rgba(209, 191, 64, 1);
+}
+
+#query-selects {
+  text-align: center;
+}
+
+#logo {
+  font-family: PoohFont;
+  text-align: center;
+}
+
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#census-link {
+  font-weight: bold;
+  display: inline-block;
+}
+
+#census-link:hover {
+  cursor: pointer;
+}
+
+#census-panel {
+  position: relative;
+  border: solid 1px black;
+}
+
+.hidden {
+  height: 0px;
+  -webkit-transition:height, 0.5s linear;
+  -moz-transition: height, 0.5s linear;
+  -ms-transition: height, 0.5s linear;
+  -o-transition: height, 0.5s linear;
+  transition: height, 0.5s linear;
+}
+
+.open {
+  height: auto;
+  -webkit-transition:height, 0.5s linear;
+  -moz-transition: height, 0.5s linear;
+  -ms-transition: height, 0.5s linear;
+  -o-transition: height, 0.5s linear;
+  transition: height, 0.5s linear;
+}
+
+.paginator {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.citizen {
+  border: solid 1px gray;
+  clear: both;
+  margin: 20px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.citizen-name {
+  display: block;
+  font-size: 2em;
+}
+
+.citizen-character {
+  display: block;
+  font-size: .75em;
+}
+
+.citizen-birth-info {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.citizen-description {
+  display: block;
+  font-family: PoohFont;
+  font-size: 1.25em;
+}
+
+.query-select {
+  display: inline-block;
+  margin: 10px 30px;
+}
+
+.query-select > select {
+  width: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
